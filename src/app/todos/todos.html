@@ -1,1 +1,8 @@
-<p>todos works!</p>
+<div>
+  <h2>Todos</h2>
+  <ul>
+    @for (todo of todos$ | async; track todo.id) {
+      <li [class.completed]="todo.completed">{{ todo.title }}</li>
+    }
+  </ul>
+</div>

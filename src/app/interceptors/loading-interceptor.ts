@@ -1,7 +1,7 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { LoadingService } from '../services/loading';
 import { inject } from '@angular/core';
-import { tap } from 'rxjs';
+import { delay, tap } from 'rxjs';
 
 
 export const loadingInterceptor: HttpInterceptorFn = (req, next) => {
